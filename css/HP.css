@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    transition: 0.4s;
+    font-family: 'Harry Potter', sans-serif;
+}
+/* header */
+#header {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+/* Lumos and Nox */
+#lumos {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+}
+/* Accio */
+#wand {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+/* wand stuff fade in */
+#wand.fadein {
+    -webkit-transition: 3s;
+    transition: 3s;
+    animation: fadein 3s;
+}
+
+/* main */
+#house {
+    position: relative;
+    z-index: 1;
+}
+#sortHouse {
+    width: 300px;
+    height: 300px;
+}
+/* crest fade in */
+#sortHouse.fadein {
+    -webkit-transition: 5s;
+    transition: 5s;
+    animation: fadein 2s;
+}
+#spell {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 모자 대사 */
+#p1 {
+    padding: 15px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 25px;
+}
+#p2 {
+    padding: 15px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 25px;
+}
+#p1.fadeout {
+    -webkit-transition: 3s;
+    transition: 3s;
+    animation: fadeout 3s 5 forwards;
+}
+#p2.fadeoutOnce {
+    -webkit-transition: 2s;
+    transition: 2s;
+    animation: fadeout 2s forwards;
+}
+
+/* footer */
+#footer {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+#header.fadein {
+    -webkit-transition: 3s;
+    transition: 3s;
+    animation: fadein 3s;
+}
+#footer.fadein {
+    -webkit-transition: 3s;
+    transition: 3s;
+    animation: fadein 3s;
+}
+
+/* 깃털 */
+#feather {
+    width: 200px;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+}
+
+/* fadein */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* fadeout */
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
